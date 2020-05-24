@@ -1,0 +1,619 @@
+$color-dark: #1c1c1c;
+$color-dark-2: #121212;
+$color-dark-3: #242424;
+
+$color-super-light: #fefefe;
+$color-light: #fafafa;
+$color-light-2: #999999;
+$color-light-3: #929292;
+$color-light-4: #ececec;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,500); //Lato font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap'); //Inter font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700&display=swap'); //Raleway
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (min-width: 70em) { @content ; }
+    }
+    @else if $point == laptop {
+        @media (min-width: 64em) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (min-width: 50em) { @content ; }
+    }
+    @else if $point == phablet {
+        @media (min-width: 37.5em)  { @content ; }
+    }
+    @else if $point == mobileonly {
+        @media (max-width: 37.5em)  { @content ; }
+
+    }
+}
+
+@mixin rangeThumb {
+    width: 18px;
+    height: 18px;
+    margin: -8px 0  0;
+    border-radius: 50%;
+    background: $color-light-4;
+    cursor: pointer;
+    border: 0 !important;
+}
+  
+@mixin rangeTrack {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: $color-light-2;
+}
+
+.text-white{
+    color: $color-light;
+
+    &:hover{
+        color: $color-light;
+    }
+}
+
+html,body{
+    font-family: 'Raleway', sans-serif !important;
+    //font-family: 'Inter', sans-serif !important;
+    font-weight: 200 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px;
+    padding: 0;
+    margin: 0;
+    background-color: $color-dark-2 !important;
+}
+
+section{
+    .header{
+        @include breakpoint(mobileonly){
+            display: block;
+            height: 75vh;
+        }
+        @include breakpoint(phablet){
+            display: block;
+            height: 90vh;
+        }
+        @include breakpoint(tablet){
+            display: flex;
+            height: 100vh;
+        }
+
+        @media (max-height: 30em) {
+            display: block;
+            height: auto;
+        }
+
+        width: 100%;
+
+        .left-content{
+            float: left;
+            padding: 1rem;
+
+            @include breakpoint(mobileonly){
+                width: 100%;
+            }
+            @include breakpoint(phablet){
+                width: 100%;
+            }
+            @include breakpoint(tablet){
+                width: 100%;
+            }
+            @include breakpoint(laptop){
+                margin-left: 5%;
+                top: 15%;
+                transform: translateY(15%);
+                width: 40%;
+            }
+
+            h1{
+                @include breakpoint(mobileonly){
+                    margin-top: 2rem;
+                    font-size: 2.5rem;
+                }
+                @include breakpoint(phablet){
+                    margin-top: 3rem;
+                    font-size: 3rem;
+                }
+                @include breakpoint(tablet){
+                    font-size: 4rem;
+                }
+                @include breakpoint(laptop){
+                    margin-top: 0rem;
+                    font-size: 6rem;
+                }
+            }
+
+            h2{
+                opacity: 0.9;
+                @include breakpoint(mobileonly){
+                    font-size: 2rem;
+                }
+                @include breakpoint(phablet){
+                    font-size: 2.5rem;
+                }
+                @include breakpoint(tablet){
+                    font-size: 3rem;
+                }
+                @include breakpoint(laptop){
+                    font-size: 3.5rem;
+                }
+            }
+        }
+        .right-content{
+            float: right;
+            padding: 1rem;
+
+            @include breakpoint(mobileonly){
+                width: 100%;
+                top: 60%;
+                transform: translateY(60%);
+            }
+            @include breakpoint(phablet){
+                width: 100%;
+                top: 60%;
+                transform: translateY(60%);
+            }
+            @include breakpoint(tablet){
+                width: 100%;
+                top: 60%;
+                transform: translateY(60%);
+            }
+            @include breakpoint(laptop){
+                margin-left: 5%;
+                top: 30%;
+                transform: translateY(30%);
+                width: 60%;
+            }
+            
+            .screenshot{
+                @media (max-height: 30em) { 
+                    display: none;
+                }
+                position: relative;
+                transform: rotate(-0deg) skewY(10deg) scale(0.8);
+                transition: all 0.3s ease-out;
+
+                z-index: 0;
+            
+                img{
+                    position: absolute;
+                    width: 100%;
+                    transition: all 0.3s ease-out;
+                }
+                
+                .background{
+                    @include breakpoint(mobileonly){
+                        top: 5%;
+                        transform: translateY(5%);
+                    }
+                    @include breakpoint(phablet){
+                        top: 10%;
+                        transform: translateY(10%);
+                    }
+                    @include breakpoint(tablet){
+                        top: 15%;
+                        transform: translateY(15%);
+                    }
+                    @include breakpoint(laptop){
+                        top: -20%;
+                        transform: translateY(-20%);
+                    }
+                }
+
+                .foreground{
+                    @include breakpoint(mobileonly){
+                        top: 5%;
+                        right: 10%;
+                        transform: translate(10%, 20%);
+                    }
+                    @include breakpoint(phablet){
+                        top: 10%;
+                        right: 10%;
+                        transform: translate(10%, 20%);
+                    }
+                    @include breakpoint(tablet){
+                        top: 15%;
+                        right: 10%;
+                        transform: translate(10%, -10%);
+                    }
+                    @include breakpoint(laptop){
+                        top: -30%;
+                        right: 10%;
+                        transform: translate(5%, -10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+footer{
+    background-color: $color-dark-2;
+}
+
+.bg-dark{
+    background-color: mix($color-dark-2, white, 92%) !important;
+}
+.bg-dark-2{
+    background-color: lighten($color-dark-2, 2.5);
+}
+.bg-dark-3{
+    background-color: mix($color-dark-2, white, 84%) !important;
+}
+
+.bg-light{
+    background-color: $color-light;
+}
+
+.colour-light{
+    color: $color-light-2 !important;
+}
+
+.display-5{
+    font-size: 2.5rem;
+    @include breakpoint(laptop){
+        font-size: 2rem;
+    }
+}
+
+.billing-cycle{
+    width: 100%;
+    border-radius: 2px;
+
+    border: 1px solid $color-light;
+    display: flex;
+    clear: both;
+    height: 100%;
+
+    div{
+        cursor: pointer;
+        color: $color-light-4;
+
+        text-align: center;
+
+        padding: 5px;
+
+        height: 100%;
+        width: 33.33%;
+
+        transition: all 250ms ease;
+    }
+
+    .selected{
+        background-color: $color-dark-3;
+        color: $color-light-4;
+    }
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 30px; /* Specified height */
+    background: #efefef; /* Grey background */
+    border-radius: 1px;
+    outline: none; /* Remove outline */
+    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: #252525; /* Dark background */
+    border: 1px solid #efefef;
+    cursor: pointer; /* Cursor on hover */
+}
+  
+.slider::-moz-range-thumb {
+    width: 30px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: #252525; /* Dark background */
+    border: 1px solid #efefef;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.pricing {
+	text-align: center;
+	border: 1px solid $color-dark-3;
+	color: $color-light;
+	font-size: 14px;
+	padding-left: 0;
+	margin-bottom: 30px;
+    font-family: 'Lato';
+
+    img{
+        display: block;
+        margin: auto;
+        width: 32px;
+    }
+
+    li:first-child, li:last-child{
+        padding: 20px 13px;
+    }
+
+    li:nth-last-child(2){
+        padding: 30px 13px;
+    }
+
+    li{
+        list-style: none;
+        padding: 13px;
+    }
+
+    li + li{
+        border-top: 1px solid $color-dark-3;
+    }
+
+    .big{
+        font-size: 32px;
+        font-family: 'Lato';
+    }
+
+    h3{
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+
+    span{
+        font-size: 12px;
+        color: $color-light;
+        font-weight: normal;
+    }
+
+    a{
+        width: auto;
+        margin: auto;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 50px;
+        color: $color-super-light;
+        padding: 9px 24px;
+        background: $color-dark-3;
+        opacity: 1;
+        transition: opacity .2s ease;
+        border: none;
+        outline: none;
+
+        &:hover{
+            opacity: 0.95;
+        }
+
+        &:active{
+            opacity: 0.85;
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.explanation-cover{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.animated-icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    span{
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        background: #f5f5f5;
+    }
+
+    span:nth-child(1){
+        top: 0px;
+    }
+    span:nth-child(2){
+        top: 10px;
+    }
+    span:nth-child(3){
+        top: 20px;
+    }
+
+    &.open{
+        span:nth-child(1){
+            top: 11px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        span:nth-child(2){
+            opacity: 0;
+        }
+        span:nth-child(3){
+            top: 11px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.arrow{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-65%,-50%);
+
+    span{
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 3px solid #efeffe;
+        border-right: 3px solid #efefef;
+        transform: rotate(45deg);
+        margin: -10px;
+    }
+}
+
+.storage-option{
+    background-color: mix($color-dark-2, white, 92%) !important;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+
+    &:hover{
+        background-color: mix($color-dark-2, white, 86%) !important;
+    }
+}
+
+.slider{
+    background-color: rgba(139, 203, 255, 0.616);
+    border: none;
+    float: left;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    transition: cubic-bezier(0.0, 0.05, 0.35, 1.0) 0.35s;
+    width: 50%;
+
+    &:hover{
+        background-color: mix(rgba(139, 203, 255, 0.616), white, 86%) !important;
+    }
+}
+
+.price-footer{
+    @include breakpoint(mobileonly){
+        height: 175px;
+    }
+    @include breakpoint(phablet){
+        height: 200px;
+    }
+    @include breakpoint(tablet){
+        height: 100px;
+    }
+}
+
+/* The slider itself */
+.price-range{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    border: 1px solid mix($color-dark-2, white, 92%) !important; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.price-range:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.price-range::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: mix($color-dark-2, white, 92%) !important; /* Background */
+    border: 1px solid white;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.price-range::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: mix($color-dark-2, white, 92%) !important; /* Green background */
+    border: 1px solid white;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.colour-switch{
+    background-color: $color-dark;
+}
+
+.gradient-switch{
+    background-image: linear-gradient(220deg, $color-dark-2 50%, $color-dark-3 50%);
+    height: 55px;
+    @include breakpoint(tablet){
+        height: 75px;
+    }
+}
+.gradient-switch-2{
+    background-image: linear-gradient(40deg, $color-dark-2 50%, $color-dark-3 50%);
+    height: 55px;
+    @include breakpoint(tablet){
+        height: 75px;
+    }
+}
+.gradient-switch-3{
+    background-image: linear-gradient(220deg, $color-dark 50%, $color-dark-2 50%);
+    height: 55px;
+    @include breakpoint(tablet){
+        height: 75px;
+    }
+}
+
+.technology{
+    background-color: $color-dark-3;
+
+    h2{
+        margin-top: 3rem;
+        opacity: 0.9;
+        @include breakpoint(mobileonly){
+            font-size: 2rem;
+        }
+        @include breakpoint(phablet){
+            font-size: 2.5rem;
+        }
+        @include breakpoint(tablet){
+            font-size: 3rem;
+        }
+        @include breakpoint(laptop){
+            font-size: 3.5rem;
+        }
+    }
+}
