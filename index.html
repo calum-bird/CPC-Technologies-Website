@@ -29,6 +29,7 @@
         <link href="assets/css/hover.min.css" rel="stylesheet"/>
         <!-- Our CSS -->
         <link href="assets/css/cpc.min.css" rel="stylesheet"/>
+        <link href="assets/css/accordion.min.css" rel="stylesheet"/>
 
         <!-- Favicons and Apple Touch Icons -->
         <link rel="apple-touch-icon" sizes="57x57"   href="assets/images/icons/icon-57.png">
@@ -100,7 +101,7 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <li class="nav-item m-1 m-lg-3">
-                        <a class="hvr-underline-from-left nav-link text-white" href="https://dash.cpc.zone">Access CloudPC</a>
+                        <a class="hvr-underline-from-left nav-link text-white" href="https://dash.cpc.zone">CloudPC Dashboard</a>
                     </li>
                 </ul>
             </div>
@@ -116,7 +117,7 @@
                                 <h1 class="text-white">CloudPC</h1>
                                 <h2 class="text-white">A computer.</h2>
                                 <h2 class="text-white">In your browser.</h2>
-                                <a class="btn btn-outline-white">Get started</a>
+                                <a class="btn btn-outline-white" href="#signup">Get started</a>
                             </div>
                             <div class="right-content">
                                 <div class="screenshot">
@@ -161,9 +162,12 @@
                             <h2 class="display-5 text-left text-md-center text-white"><b>Upgrade in seconds.</b></h2>
                             <br>
                             <p class="lead text-left text-white" style="opacity: 0.8;">
-                                Your CloudPC can be upgraded at the press of a button to unleash up to 8x the compute power.
-                                Gone are the days of day-long upgrades. Stop paying for the max workload requirement -
+                                Your CloudPC can be upgraded at the press of a button to unleash up to 8x* the compute power.
+                                Gone are the days of week-long upgrades. Stop paying for your maximum workload requirement -
                                 pay for the minimum. Downgrade at any time. You just need to restart.
+                                <br>
+                                <br>
+                                *Contact us if you need more. We have it.
                             </p>
                         </div>
                     </div>
@@ -247,9 +251,7 @@
                             From the user interface to pricing, we want you to be able
                             to use your CloudPC as easily as possible. Transparent pricing
                             is key to ensuring this, which is why we have created this
-                            simple price sheet for your convenience. If you would like to
-                            just get an understanding on how much CloudPC will cost for
-                            you, please feel free to use the calculator linked below!
+                            simple price sheet for your convenience.
                         </p>
                     </div>
                 </div>
@@ -326,23 +328,147 @@
         </section>
         <!-- /Pricing model/ -->
         <div class="gradient-switch-2"></div>
+        <!-- Frequently Asked Questions -->
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-12 offset-0 col-lg-10 offset-lg-1 mt-5">
-                        <h2 class="text-center text-white"><b>CloudPC resourc</b></h2>
+                        <div class="jumbotron bg-dark mt-4 text-center" style="margin-bottom: 0 !important;">
+                            <h2 class="text-center text-white"><b>Questions, anyone?</b></h2>
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <button id="accordion-button-1" aria-expanded="false">
+                                        <span class="accordion-title">Why is CloudPC useful to me?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            If you own an old computer, CloudPC provides a way to keep using that machine
+                                            as a means of accessing an entirely new computer, without the upfront investment.
+                                            It keeps electronic waste out of landfills, and money in your pocket! It's truly
+                                            magical!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button id="accordion-button-2" aria-expanded="false">
+                                        <span class="accordion-title">How much does CloudPC cost each month?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Your own costs will vary widely based on your storage and compute requirements, but
+                                            we tend to see the average monthly bill totalling between $30 and $50. This roughly
+                                            coincides with a full work month worth of usage on our base plan and 128GB of storage.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button id="accordion-button-3" aria-expanded="false">
+                                        <span class="accordion-title">Storage is expensive! What if I have a lot of files?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            We understand. We're quite limited in reducing the pricing of our storage due
+                                            to our overhead costs. However, to combat this we've partnered with Sync, a
+                                            Canadian cloud storage company! You can purchase one of their plans through our
+                                            link, and select the folders you want to keep on Sync instead of CloudPC. This
+                                            also let's you access your files from anywhere without having to start your CloudPC!
+                                            <a class="hvr-underline-from-left link" href="https://www.sync.com/pricing-individual/">We recommend the 2TB plan for $96/yr.*</a>
+                                        </p>
+                                        <p class="text-white text-left">* We receive affiliate revenue when you click our link and ultimately purchase a Sync plan.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button id="accordion-button-4" aria-expanded="false">
+                                        <span class="accordion-title">Do I pay for usage while my CloudPC is shut down?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Nope! When you shutdown your CloudPC, billing stops immediately.
+                                            If you're using your CloudPC and run out of credits, we'll send several
+                                            reminder emails before shutting it down for you. Just make sure you
+                                            use the dashboard to shutdown, shutting down through Windows won't
+                                            notify us and you will still be billed (albeit unintentionally).
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button id="accordion-button-5" aria-expanded="false">
+                                        <span class="accordion-title">Will we ever discover aliens?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            We hope so! Maybe they are already here, and secretly brought us the technology behind CloudPC?
+                                            <br>
+                                            <br>
+                                            <a class="text-white" href="aliens.html" target="_blank">Haha... just kidding... unless?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <br class="mt-5 mb-5">
+                            <br class="mt-5 mb-5">
+                            <a class="btn btn-outline-white text-white" href="learn.html">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Footer-->
-        <footer class="page-footer font-small pt-4 pb-2" style="z-index: 2;">
-            <div class="container-fluid text-center text-lg-left">
-                <div class="row">
-                    <div class="col-12 offset-0 col-lg-3 offset-lg-3">
-                        <p class="lead white-text text-center text-lg-left colour-light">&copy; CPC Technologies 2020</p>
+        <!-- /Frequently Asked Questions/ -->
+        <br class="d-block">
+        <br class="d-block">
+        <br class="d-block">
+        <br class="d-none d-lg-block">
+        <div class="gradient-switch" id="signup"></div>
+        <!-- Signup Prompt -->
+        <section class="technology">
+            <div class="container">
+                <div class="row pt-5 pb-5" id="signup_form">
+                    <div class="col-12 offset-0 col-lg-5 offset-lg-1 mt-5">
+                        <h1 class="display-5 text-left text-white">Let's get started!</h1>
+                        <p class="lead text-left text-white">
+                            We'll set you up with an account first, and once you've
+                            finished signing up, you can purchase a CloudPC and
+                            let the fun begin!
+                        </p>
                     </div>
-                    <div class="col-12 offset-0 col-lg-3 offset-lg-0">
+                    <div class="col-12 offset-0 col-lg-5 offset-lg-0">
+                        <form class="signup-form" method="post">
+                            <input type="email" class="input" id="user_email" autocomplete="on" placeholder="Email">
+                            <input type="password" class="input" id="user_password" autocomplete="off" placeholder="Password">
+                            <div class="g-recaptcha" data-sitekey="6Le2CqMUAAAAAHRccCbtJasBZayFtFNQQSPL2gGT" data-size="small" data-theme="dark"></div>
+                            <br>
+                            <input type="submit" class="btn btn-outline-white" id="btn_signup" value="Sign Up">
+                        </form>
+                    </div>
+                </div>
+                <div class="d-none row pt-5 pb-5" id="verify">
+                    <div class="col-12 offset-0 col-lg-6 offset-lg-3 mt-5">
+                        <h1 class="display-5 text-center text-white">Please verify your email!</h1>
+                        <p class="lead text-left text-white">
+                            Before proceeding, we just need to make sure that
+                            you are who you say you are. In your inbox you should
+                            find a verification email. Click that link, and you'll
+                            be good to go!
+                            <br>
+                            <br>
+                            The verification email was sent to <span id="email"></span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Signup Prompt/ -->
+        <!--Footer-->
+        <footer class="page-footer font-small pt-4 pb-2 technology" style="z-index: 2;">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-12 offset-0 col-lg-3 offset-lg-2">
+                        <p class="lead white-text text-center colour-light">&copy; CPC Technologies 2020</p>
+                    </div>
+                    <div class="col-12 offset-0 col-lg-2">
+                        <a class="colour-light lead text-center white-text" href="https://www.protodigital.ca" target="_blank">Website by Proto</a>
+                    </div>
+                    <div class="col-12 offset-0 col-lg-3">
                         <p class="lead text-center colour-light">
                             Email: <a class="colour-light" href="mailto:contact@cpc.zone" target="_blank">contact@cpc.zone</a>
                         </p>
@@ -354,6 +480,7 @@
 
         <!-- JQuery -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
@@ -361,12 +488,19 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+        <!-- Auth0 -->
+        <script src="https://cdn.auth0.com/js/auth0/9.13.2/auth0.min.js"></script>
 
         <!-- Our Scripts -->
-        <script src="assets/js/site.js"></script>
+        <script src="assets/js/accordion.js" type="text/javascript"></script>
+        <script src="assets/js/site.js" type="text/javascript"></script>
         <script>
-            $(document).ready(function() { 
-                new WOW().init();
+            var webAuth = new auth0.WebAuth({
+                domain:       'cloudpc-test.auth0.com',
+                clientID:     'GOz4APX482IWDoRiIJfBE4hr2QQSfxnO'
+            });
+            
+            $(document).ready(function() {
                 var screenshotImage = document.getElementById('windows-screenshot');
                 var screenshotLogin = document.getElementById('login-screenshot');
 
@@ -384,9 +518,36 @@
                 }
             });
 
-            $(document).ready(function () {
+            $(document).ready(function() {
                 $('.navbar-toggler').on('click', function () {
                     $('.animated-icon').toggleClass('open');
+                });
+            });
+
+            $('#btn_signup').click(function(e) {
+                user_email = $('#user_email').val();
+                e.preventDefault();
+                webAuth.signup({
+                    connection: 'Username-Password-Authentication',
+                    email: user_email,
+                    password: $('#user_password').val()
+                }, function(err) {
+                    if (err){
+                        console.log(err);
+                        return alert('Something went wrong: ' + err.message);
+                    }
+
+                    // Okay, user has been signed up. Let's make sure they
+                    // verify their email!
+                    console.log("Successful signup!");
+                    form = document.getElementById('signup_form');
+                    form.classList.add('d-none');
+
+                    document.getElementById('email').innerText = user_email;
+
+                    verify = document.getElementById('verify');
+                    verify.classList.remove('d-none');
+                    verify.classList.add('d-block');
                 });
             });
         </script>

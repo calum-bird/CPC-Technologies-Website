@@ -8,9 +8,8 @@ $color-light-2: #999999;
 $color-light-3: #929292;
 $color-light-4: #ececec;
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,500); //Lato font
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap'); //Inter font
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700&display=swap'); //Raleway
+@import url(https://fonts.googleapis.com/css?family=Lato:300&display=swap); //Lato font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap'); //Raleway
 
 @mixin breakpoint($point) {
     @if $point == desktop {
@@ -57,15 +56,19 @@ $color-light-4: #ececec;
 }
 
 html,body{
-    font-family: 'Raleway', sans-serif !important;
-    //font-family: 'Inter', sans-serif !important;
-    font-weight: 200 !important;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 300 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-stroke: 0.45px;
+    -webkit-text-stroke: 0.75px;
     padding: 0;
     margin: 0;
     background-color: $color-dark-2 !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif !important;
+    letter-spacing: 0.025em;
 }
 
 section{
@@ -268,143 +271,6 @@ footer{
     }
 }
 
-.billing-cycle{
-    width: 100%;
-    border-radius: 2px;
-
-    border: 1px solid $color-light;
-    display: flex;
-    clear: both;
-    height: 100%;
-
-    div{
-        cursor: pointer;
-        color: $color-light-4;
-
-        text-align: center;
-
-        padding: 5px;
-
-        height: 100%;
-        width: 33.33%;
-
-        transition: all 250ms ease;
-    }
-
-    .selected{
-        background-color: $color-dark-3;
-        color: $color-light-4;
-    }
-}
-
-.slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 30px; /* Specified height */
-    background: #efefef; /* Grey background */
-    border-radius: 1px;
-    outline: none; /* Remove outline */
-    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-  
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 30px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
-    background: #252525; /* Dark background */
-    border: 1px solid #efefef;
-    cursor: pointer; /* Cursor on hover */
-}
-  
-.slider::-moz-range-thumb {
-    width: 30px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
-    background: #252525; /* Dark background */
-    border: 1px solid #efefef;
-    cursor: pointer; /* Cursor on hover */
-}
-
-.pricing {
-	text-align: center;
-	border: 1px solid $color-dark-3;
-	color: $color-light;
-	font-size: 14px;
-	padding-left: 0;
-	margin-bottom: 30px;
-    font-family: 'Lato';
-
-    img{
-        display: block;
-        margin: auto;
-        width: 32px;
-    }
-
-    li:first-child, li:last-child{
-        padding: 20px 13px;
-    }
-
-    li:nth-last-child(2){
-        padding: 30px 13px;
-    }
-
-    li{
-        list-style: none;
-        padding: 13px;
-    }
-
-    li + li{
-        border-top: 1px solid $color-dark-3;
-    }
-
-    .big{
-        font-size: 32px;
-        font-family: 'Lato';
-    }
-
-    h3{
-        font-size: 36px;
-        margin-bottom: 0;
-    }
-
-    span{
-        font-size: 12px;
-        color: $color-light;
-        font-weight: normal;
-    }
-
-    a{
-        width: auto;
-        margin: auto;
-        font-size: 15px;
-        font-weight: 500;
-        border-radius: 50px;
-        color: $color-super-light;
-        padding: 9px 24px;
-        background: $color-dark-3;
-        opacity: 1;
-        transition: opacity .2s ease;
-        border: none;
-        outline: none;
-
-        &:hover{
-            opacity: 0.95;
-        }
-
-        &:active{
-            opacity: 0.85;
-            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
-        }
-    }
-}
-
 .explanation-cover{
     margin: 0;
     position: relative;
@@ -498,12 +364,18 @@ footer{
 }
 
 .storage-option{
-    background-color: mix($color-dark-2, white, 92%) !important;
+    background-color: mix($color-dark-2, white, 84%) !important;
     cursor: pointer;
-    transition: 0.15s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
     &:hover{
         background-color: mix($color-dark-2, white, 86%) !important;
+    }
+
+    &.clicked{
+        background-color: mix($color-dark-2, white, 90%) !important;
+        color: $color-super-light !important;
+        outline: none !important;
     }
 }
 
@@ -523,14 +395,15 @@ footer{
 }
 
 .price-footer{
+    font-family: 'Roboto';
     @include breakpoint(mobileonly){
-        height: 175px;
+        max-height: 175px;
     }
     @include breakpoint(phablet){
-        height: 200px;
+        max-height: 200px;
     }
     @include breakpoint(tablet){
-        height: 100px;
+        max-height: 100px;
     }
 }
 
@@ -615,5 +488,47 @@ footer{
         @include breakpoint(laptop){
             font-size: 3.5rem;
         }
+    }
+}
+
+.link{
+    color: #34c3e2;
+
+    &:hover{
+        color: #34c3e2;
+    }
+}
+
+.input{
+    margin: 0 0 .8em 0;
+    padding: .8em 2em 10px 0;
+    width: 100%;
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $color-light-2;
+    outline: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    color: $color-light;
+}
+
+.skewed{
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(tablet){
+        transform: skewY(10deg);
+    }
+}
+
+.skewed-right{
+    position: relative;
+    width: 100%;
+
+    @include breakpoint(tablet){
+        transform: skewY(-10deg);
     }
 }
