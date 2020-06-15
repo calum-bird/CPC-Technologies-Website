@@ -8,7 +8,7 @@ $color-light-2: #999999;
 $color-light-3: #929292;
 $color-light-4: #ececec;
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300&display=swap); //Lato font
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap'); //Lato font
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap'); //Raleway
 
 @mixin breakpoint($point) {
@@ -530,5 +530,45 @@ footer{
 
     @include breakpoint(tablet){
         transform: skewY(-10deg);
+    }
+}
+
+.spacing{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(phablet){
+        margin-top: 12rem;
+        margin-bottom: 12rem;
+    }
+
+    @include breakpoint(tablet){
+        margin-top: 16rem;
+        margin-bottom: 16rem;
+    }
+
+    @include breakpoint(laptop){
+        margin-top: 18rem;
+        margin-bottom: 18rem;
+    }
+}
+
+.spacing-small{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(phablet){
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    @include breakpoint(tablet){
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint(laptop){
+        margin-top: 8rem;
+        margin-bottom: 8rem;
     }
 }
