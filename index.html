@@ -64,7 +64,6 @@
         <div id="top"></div>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center" style="z-index: 1;">
-            
             <div class="d-flex w-50 mr-auto">
                 <a class="navbar-brand text-white" href="#top">
                     <img src="assets/images/LightMark.svg" height="32">
@@ -79,7 +78,7 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse w-100" id="collapsingNavbar">
-                <ul class="ml-0 navbar-nav w-100 justify-content-center">
+                <ul class="navbar-nav w-100 justify-content-center">
                     <li class="active nav-item m-1 m-lg-3">
                         <a class="hvr-underline-from-left nav-link text-white" href="index.html">Discover</a>
                     </li>
@@ -334,13 +333,13 @@
                                     <div class="accordion-content">
                                         <p>
                                             We understand. We're quite limited in reducing the pricing of our storage due
-                                            to our overhead costs. However, to combat this we've partnered with Sync, a
+                                            to our overhead costs. However, to combat this we reccomend with Sync, a
                                             Canadian cloud storage company! You can purchase one of their plans through our
                                             link, and select the folders you want to keep on Sync instead of Trelent. This
                                             also let's you access your files from anywhere without having to start your Trelent PC!
                                             <a class="hvr-underline-from-left link" href="https://www.sync.com/pricing-individual/">We recommend the 2TB plan for $96/yr.*</a>
                                         </p>
-                                        <p class="text-white text-left">* We receive affiliate revenue when you click our link and ultimately purchase a Sync plan.</p>
+                                        <p class="text-white text-left">* We may receive affiliate revenue when you click our link and purchase a plan through Sync.</p>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -396,13 +395,14 @@
                     </div>
                     <div class="col-12 offset-0 col-lg-5 offset-lg-0">
                         <form class="signup-form" method="post">
-                            <input type="email" class="input" id="user_email" autocomplete="on" placeholder="Email">
-                            <input type="password" class="input" id="user_password" autocomplete="off" placeholder="Password">
+                            <input type="email" class="input" id="user_email" autocomplete="on" placeholder="Email" required>
+                            <input type="password" class="input" id="user_password" autocomplete="off" placeholder="Password" required>
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="termsCheckbox">
-                                <label class="text-white custom-control-label" for="termsCheckbox">I agree to the Terms and Conditions</label>
+                                <input type="checkbox" class="custom-control-input" id="termsCheckbox" required>
+                                <label class="text-white custom-control-label" for="termsCheckbox">I agree to the <a class="colour-light" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Hosting Terms and Conditions</a> and have reviwed our <a class="colour-light" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Privacy Policy</a>.</label>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6Le2CqMUAAAAAHRccCbtJasBZayFtFNQQSPL2gGT" data-size="small" data-theme="dark"></div>
+                            <br>
+                            <div class="g-recaptcha" data-sitekey="6LfBCqMUAAAAAM5ZmjqRbUj-ITvpAt7pQnb1UKzA" data-size="small" data-theme="dark"></div>
                             <br>
                             <input type="submit" class="btn btn-outline-white" id="btn_signup" value="Sign Up">
                         </form>
@@ -439,6 +439,14 @@
                         <p class="lead text-center colour-light">
                             Email: <a class="colour-light" href="mailto:contact@trelent.net" target="_blank">contact@trelent.net</a>
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 offset-0 col-lg-3 offset-lg-3">
+                        <a class="colour-light lead text-center" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Hosting Terms and Conditions</a>
+                    </div>
+                    <div class="col-12 offset-0 col-lg-3 offset-lg-0">
+                        <a class="colour-light lead text-center" href="assets/legal/Trelent-Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -516,6 +524,17 @@
                     verify.classList.add('d-block');
                 });
             });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118584158-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-118584158-2');
+            gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
         </script>
     </body>
 </html>

@@ -77,7 +77,7 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse w-100" id="collapsingNavbar">
-                <ul class="ml-0 ml-lg-5 navbar-nav w-100 justify-content-center">
+                <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item m-1 m-lg-3">
                         <a class="hvr-underline-from-left nav-link text-white" href="index.html">Discover</a>
                     </li>
@@ -348,6 +348,17 @@
                     $('.animated-icon').toggleClass('open');
                 });
             });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118584158-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-118584158-2');
+            gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
         </script>
     </body>
 </html>

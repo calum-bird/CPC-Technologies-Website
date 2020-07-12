@@ -79,7 +79,7 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse w-100" id="collapsingNavbar">
-                <ul class="ml-0 ml-lg-5 navbar-nav w-100 justify-content-center">
+                <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item m-1 m-lg-3">
                         <a class="hvr-underline-from-left nav-link text-white" href="index.html">Discover</a>
                     </li>
@@ -333,8 +333,13 @@
                     <div class="col-12 offset-0 col-lg-5 offset-lg-0">
                         <form class="signup-form" method="post">
                             <input type="email" class="input" id="user_email" autocomplete="on" placeholder="Email" required>
-                            <input type="password" class="input" id="user_password" autocomplete="off" placeholder="Password" required minlength="8">
-                            <div class="g-recaptcha" data-sitekey="6Le2CqMUAAAAAHRccCbtJasBZayFtFNQQSPL2gGT" data-size="small" data-theme="dark"></div>
+                            <input type="password" class="input" id="user_password" autocomplete="off" placeholder="Password" required>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="termsCheckbox" required>
+                                <label class="text-white custom-control-label" for="termsCheckbox">I agree to the <a class="colour-light" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Hosting Terms and Conditions</a> and have reviwed our <a class="colour-light" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Privacy Policy</a>.</label>
+                            </div>
+                            <br>
+                            <div class="g-recaptcha" data-sitekey="6LfBCqMUAAAAAM5ZmjqRbUj-ITvpAt7pQnb1UKzA" data-size="small" data-theme="dark"></div>
                             <br>
                             <input type="submit" class="btn btn-outline-white" id="btn_signup" value="Sign Up">
                         </form>
@@ -371,6 +376,14 @@
                         <p class="lead text-center colour-light">
                             Email: <a class="colour-light" href="mailto:contact@trelent.net" target="_blank">contact@trelent.net</a>
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 offset-0 col-lg-3 offset-lg-3">
+                        <a class="colour-light lead text-center" href="assets/legal/Trelent-Hosting-Terms-and-Conditions.pdf" target="_blank">Hosting Terms and Conditions</a>
+                    </div>
+                    <div class="col-12 offset-0 col-lg-3 offset-lg-0">
+                        <a class="colour-light lead text-center" href="assets/legal/Trelent-Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -504,6 +517,17 @@
                     setTimeout(type, delay/2);
                 }
             }
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118584158-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-118584158-2');
+            gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
         </script>
     </body>
 </html>
