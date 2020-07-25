@@ -11,7 +11,7 @@
         <title>Personal computers, reimagined | Trelent</title>
 
         <meta name="keywords" content="Trelent, Trelent PC, CloudPC, Trelent Technologies, Cloud Personal Computer, Cloud, Computer, Personal Computer, Cloud Computing, PC, Cloud Device, Cloud Compute, Cloud Computing">
-        <meta name="description" content="A scalable PC in your browser.">
+        <meta name="description" content="A scalable, accessible PC in your browser.">
 
         <!-- Mobile -->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,19 +45,19 @@
         <!-- Optimize for social sharing -->
         <meta property="og:url">
         <meta property="og:title" content="Personal computers, reimagined | Trelent">
-        <meta property="og:description" content="Trelent rethinks what a personal computer can be. Accessed through a web browser, you can connect from anywhere and any device. Upgrade in seconds, and only pay for what you use.">
-        <meta property="og:image" content="https://www.trelent.net/assets/images/cpcLogo1024.png">
+        <meta property="og:description" content="A scalable, accessible PC in your browser.">
+        <meta property="og:image" content="https://www.trelent.net/assets/images/icons/android-chrome-512x512.png">
         <meta property="og:image:url">
         <meta property="og:image:secure_url">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@cpctechnologies">
-        <meta name="twitter:site:id" content="@cpctechnologies">
-        <meta name="twitter:creator" content="@cpctechnologies ">
-        <meta name="twitter:creator:id" content="@cpctechnologies ">
+        <meta name="twitter:site" content="@trelentpc">
+        <meta name="twitter:site:id" content="@trelentpc">
+        <meta name="twitter:creator" content="@trelentpc ">
+        <meta name="twitter:creator:id" content="@trelentpc ">
         <meta name="twitter:url" content="https://www.trelent.net">
         <meta name="twitter:title" content="Personal computers, reimagined | Trelent">
-        <meta name="twitter:description" content="Trelent rethinks what a personal computer can be. Accessed through a web browser, you can connect from anywhere and any device. Upgrade in seconds, and only pay for what you use.">
-        <meta name="twitter:image" content="https://www.trelent.net/assets/images/cpcLogo1024.png">
+        <meta name="twitter:description" content="A scalable, accessible PC in your browser.">
+        <meta name="twitter:image" content="https://www.trelent.net/assets/images/icons/android-chrome-512x512.png">
         <!-- End Optimize -->
     </head>
     <body>
@@ -111,7 +111,7 @@
                                 <h2 class="text-white">A computer.</h2>
                                 <h2 class="text-white">In your browser.</h2>
                                 <a class="btn btn-outline-white mb-4" href="#signup">Get started</a>
-                                <a href="https://www.producthunt.com/posts/trelent?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trelent" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=222667&theme=dark" alt="Trelent - A scalable PC in your browser | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+                                <a class="d-none d-lg-block" href="https://www.producthunt.com/posts/trelent?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trelent" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=222667&theme=dark" alt="Trelent - A scalable PC in your browser | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
                             </div>
                             <div class="right-content">
                                 <div class="screenshot">
@@ -409,6 +409,14 @@
                         </form>
                     </div>
                 </div>
+                <div class="alert alert-warning alert-dismissible fade mb-0" id="alert-email" role="alert">
+                    We are aware of an issue impacting email deliveries to Office 365 accounts.
+                    If you don't recieve an email, send us one instead from the same email you
+                    registered with, and we will manually mark it as verified as soon as possible!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="d-none row pt-5 pb-5" id="verify">
                     <div class="col-12 offset-0 col-lg-6 offset-lg-3 mt-5">
                         <h1 class="display-5 text-center text-white">Please verify your email!</h1>
@@ -476,6 +484,8 @@
         <script src="assets/js/accordion.js" type="text/javascript"></script>
         <script src="assets/js/site.js" type="text/javascript"></script>
         <script>
+            var alertElem = document.getElementById("alert-email");
+
             var webAuth = new auth0.WebAuth({
                 domain:       'trelent.us.auth0.com',
                 clientID:     'GOy6WMpPw3EPpEL5ZaI82lyjEKStgqkb'
@@ -509,6 +519,9 @@
 
                 user_email = $('#user_email').val();
                 user_paswd = $('#user_password').val();
+
+                alertElem.classList.add("show");
+
                 webAuth.signup({
                     connection: 'Username-Password-Authentication',
                     email: user_email,
