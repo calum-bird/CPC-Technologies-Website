@@ -123,26 +123,28 @@ section{
                     font-size: 3rem;
                 }
                 @include breakpoint(tablet){
+                    margin-top: 4rem;
                     font-size: 4rem;
                 }
                 @include breakpoint(laptop){
-                    margin-top: 0rem;
+                    margin-top: 6rem;
                     font-size: 6rem;
                 }
             }
 
             h2{
                 opacity: 0.9;
+
                 @include breakpoint(mobileonly){
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
                 @include breakpoint(phablet){
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                 }
                 @include breakpoint(tablet){
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
-                @include breakpoint(laptop){
+                @include breakpoint(laptop){ 
                     font-size: 3.5rem;
                 }
             }

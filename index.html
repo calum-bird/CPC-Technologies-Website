@@ -20,16 +20,18 @@
         <meta id="viewport-tag" name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1, minimal-ui, shrink-to-fit=no">
 
         <!-- Font Awesome -->
-        <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+
         <!-- Hover CSS -->
         <link href="assets/css/hover.min.css" rel="stylesheet"/>
         <!-- Our CSS -->
-        <link href="assets/css/cpc.min.css" rel="stylesheet"/>
+        <link href="assets/css/cpc.css" rel="stylesheet"/>
         <link href="assets/css/accordion.min.css" rel="stylesheet"/>
+        <link href="assets/css/price-table.css" rel="stylesheet"/>
 
         <!-- Favicons and Apple Touch Icons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
@@ -39,7 +41,7 @@
         <link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#333333">
         <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
         <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+        <meta name="msapplication-config" content="/assets/images/icons/browserconfig.xms">
         <meta name="theme-color" content="#ffffff">
 
         <!-- Optimize for social sharing -->
@@ -59,14 +61,26 @@
         <meta name="twitter:description" content="A scalable, accessible PC in your browser.">
         <meta name="twitter:image" content="https://www.trelent.net/assets/images/icons/android-chrome-512x512.png">
         <!-- End Optimize -->
+
+        <!-- Hotjar Tracking Code for www.trelent.net -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1211976,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
     </head>
     <body>
         <div id="top"></div>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center" style="z-index: 1;">
-            <div class="d-flex w-50 mr-auto">
+            <div class="d-flex me-auto ms-0 ms-lg-5 w-50">
                 <a class="navbar-brand text-white" href="#top">
-                    <img src="assets/images/LightMark.svg" height="32">
+                    <img src="assets/images/LightWordmark.svg" height="42">
                 </a>
             </div>
             
@@ -88,12 +102,9 @@
                     <li class="nav-item m-1 m-lg-3">
                         <a class="hvr-underline-from-left nav-link text-white" href="#signup">Purchase</a>
                     </li>
-                    <li class="nav-item m-1 m-lg-3">
-                        <a class="hvr-underline-from-left nav-link text-white" href="calculator.html">Calculate price</a>
-                    </li>
                 </ul>
-                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                    <li class="nav-item m-1 m-lg-3">
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item m-1 m-lg-3 me-0 me-lg-5">
                         <a class="hvr-underline-from-left nav-link text-white" href="https://dash.trelent.net">Trelent Dashboard</a>
                     </li>
                 </ul>
@@ -102,16 +113,20 @@
         <!--/Navbar/-->
         <!--Trelent Header-->
         <section class="colour-switch">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 offset-0">
                         <div class="header">
-                            <div class="left-content text-center text-lg-left">
+                            <div class="left-content text-left">
+                                <!--
                                 <h1 class="text-white"><img class="img-responsive w-80" src="assets/images/LightWordmark.svg"></h1>
-                                <h2 class="text-white">A computer.</h2>
-                                <h2 class="text-white">In your browser.</h2>
-                                <a class="btn btn-outline-white mb-4" href="#signup">Get started</a>
+                                -->
+                                <h1 class="text-white">Computers are slow.</h1>
+                                <h2 class="text-white">Trelent fixes that.</h2>
+                                <a class="btn btn-outline-white btn-lg mb-4" href="#signup">Get started</a>
+                                <!--
                                 <a class="d-none d-lg-block" href="https://www.producthunt.com/posts/trelent?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trelent" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=222667&theme=dark" alt="Trelent - A scalable PC in your browser | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+                                -->
                             </div>
                             <div class="right-content">
                                 <div class="screenshot">
@@ -140,6 +155,7 @@
                     </div>
                 </div>
                 <hr class="mt-4 mb-4">
+                <!--
                 <div class="row spacing">
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0">
                         <img class="w-100 d-none d-lg-block" src="assets/images/Illustrations/Upgradibility.svg">
@@ -156,24 +172,51 @@
                                 <br>
                                 *Contact us if you need more. We have it.
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white ms-0 text-white" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0">
                         <img class="w-100 d-block d-lg-none p-2" src="assets/images/Illustrations/Upgradibility.svg">
                     </div>
                 </div>
+                -->
+                <div class="row spacing">
+                    <div class="col-12 offset-0 col-lg-6 offset-lg-0">
+                        <img class="w-100 d-none d-lg-block" src="assets/images/Illustrations/secure_server.svg">
+                    </div>
+                    <div class="col-12 offset-0 col-lg-6 offset-lg-0 mb-5 mb-lg-0">
+                        <div class="p-lg-5">
+                            <h2 class="display-5 text-left text-white"><b>Here's how it works.</b></h2>
+                            <br>
+                            <p class="lead text-left text-white">
+                                Your Trelent PC is a powerful, secure computer in the cloud.
+                                <br>
+                                <br>
+                                By accessing Trelent, you run all your slowest programs and store your largest files on a remote computer,
+                                instead of on your own!
+                                <br>
+                                <br>
+                                This way, resource-hungry apps won't be slowing down your computer, and it can run at its full potential.
+                            </p>
+                            <div class="col-12 offset-0 col-lg-6 offset-lg-0">
+                                <img class="w-100 d-block d-lg-none p-2" src="assets/images/Illustrations/secure_server.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row spacing">
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0 mb-5 mb-lg-0">
                         <div class="p-lg-5 mt-5">
                             <h2 class="display-5 text-left text-white"><b>Only pay for what you use.</b></h2>
-                            <br>
-                            <p class="lead text-left text-white" style="opacity: 0.8;">
-                                You only pay for your Trelent PC while it is running. Pay a small fee for upgrades, but never pay
-                                for downgrades. Storage is billed monthly, it's usage doesn't matter. Don't need your computer 
-                                for a couple hours? Don't worry. You just need to shutdown.
+                            <p class="lead text-left text-white">
+                                Don't need your Trelent PC often? We have a plan for that.
+                                <br>
+                                <span style="opacity: 0.7;">
+                                    Your monthly bill covers storage and monthly usage. You're a
+                                    power user and need more hours? No problem! We have a plan for that too.
+                                </span>
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white btn-lg" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0">
@@ -186,14 +229,16 @@
                     </div>
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0 mb-5 mb-lg-0">
                         <div class="p-lg-5 mt-5">
-                            <h2 class="display-5 text-left text-white"><b>Connect from any device</b></h2>
-                            <br>
-                            <p class="lead text-left text-white" style="opacity: 0.8;">
-                                Your Trelent PC can be accessed through any device with a web browser. It behaves exactly like
-                                the Windows PC you're used to. Purchase and install programs the same way - there is no 
-                                learning curve. Connect instantly from any online device. You just need to login.
+                            <h2 class="display-5 text-left text-white"><b>Connect from any device.</b></h2>
+                            <p class="lead text-left text-white">
+                                Your Trelent PC can be accessed through any web browser.
+                                <br>
+                                <span style="opacity: 0.7;">
+                                    It behaves exactly like the Windows PC you're used to. Purchase and
+                                    install programs the same way you always have - there's no learning curve.
+                                </span>
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white btn-lg ms-0 text-white" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0">
@@ -204,23 +249,148 @@
         </section>
         <div class="spacing"></div>
         <!--/Trelent Explanation/-->
-        <div class="gradient-switch"></div>
+        <div class="gradient-switch" id="signup"></div>
         <!-- Pricing model -->
         <section class="technology">
             <div class="container">
                 <div class="row">
                     <div class="col-12 offset-0 col-lg-10 offset-lg-1">
-                        <h2 class="text-center text-white"><b>Trelent - built for accessibility.</b></h2>
+                        <h2 class="text-center text-white">Ready to get started?</h2>
                     </div>
                     <div class="col-12 offset-0 col-lg-8 offset-lg-2">
-                        <p class="lead text-left text-white" style="opacity: 0.9;">
-                            From the user interface to pricing, we want you to be able
-                            to use your Trelent PC as easily as possible. Transparent pricing
-                            is key to ensuring this, which is why we have created this
-                            price sheet for your convenience.
+                        <p class="lead text-left text-md-center text-white" style="opacity: 0.9;">
+                            We have four simple pricing plans to offer you
+                            both flexibility and cost-efficiency.
                         </p>
                     </div>
                 </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-3 mt-4 mt-lg-0">
+                        <div class="pricing_content clearfix">
+                            <div class="pricing_head_price clearfix">
+                                <div class="pricing_head_content clearfix">
+                                    <div class="head_bg"></div>
+                                    <div class="head">
+                                        <span>Starter</span>
+                                    </div>
+                                </div>
+                                <div class="pricing_price_tag clearfix">	
+                                    <span class="price">
+                                        <span class="sign">$</span>
+                                        <span class="currency">9</span>
+                                        <span class="cent">.99</span>
+                                        <span class="month">/mo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pricing_feature_list">
+                                <ul>
+                                    <li><span>64GB</span> Storage</li>
+                                    <li><span>20Hrs</span> Usage</li>
+                                </ul>
+                            </div>
+                            <div class="pricing_price_btn clearfix">
+                                <a href="https://trelent-dashboard.ngrok.io/buy?plan=1">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-3 mt-4 mt-lg-0">
+                        <div class="pricing_content active clearfix">
+                            <div class="pricing_head_price clearfix">
+                                <div class="pricing_head_content clearfix">
+                                    <div class="head_bg"></div>
+                                    <div class="head">
+                                        <span>Standard</span>
+                                    </div>
+                                </div>
+                                <div class="pricing_price_tag clearfix">	
+                                    <span class="price">
+                                        <span class="sign">$</span>
+                                        <span class="currency">19</span>
+                                        <span class="cent">.99</span>
+                                        <span class="month">/mo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pricing_feature_list">
+                                <ul>
+                                    <li><span>128GB</span> Storage</li>
+                                    <li><span>40Hrs</span> Usage</li>
+                                </ul>
+                            </div>
+                            <div class="pricing_price_btn clearfix">
+                                <a href="https://trelent-dashboard.ngrok.io/buy?plan=2">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-3 mt-4 mt-lg-0">
+                        <div class="pricing_content clearfix">
+                            <div class="pricing_head_price clearfix">
+                                <div class="pricing_head_content clearfix">
+                                    <div class="head_bg"></div>
+                                    <div class="head">
+                                        <span>Plus</span>
+                                    </div>
+                                </div>
+                                <div class="pricing_price_tag clearfix">	
+                                    <span class="price">
+                                        <span class="sign">$</span>
+                                        <span class="currency">39</span>
+                                        <span class="cent">.99</span>
+                                        <span class="month">/mo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pricing_feature_list">
+                                <ul>
+                                    <li><span>256GB</span> Storage</li>
+                                    <li><span>80Hrs</span> Usage</li>
+                                </ul>
+                            </div>
+                            <div class="pricing_price_btn clearfix">
+                                <a href="https://trelent-dashboard.ngrok.io/buy?plan=3">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 col-sm-6 offset-sm-0 col-lg-3 mt-4 mt-lg-0">
+                        <div class="pricing_content clearfix">
+                            <div class="pricing_head_price clearfix">
+                                <div class="pricing_head_content clearfix">
+                                    <div class="head_bg"></div>
+                                    <div class="head">
+                                        <span>Premium</span>
+                                    </div>
+                                </div>
+                                <div class="pricing_price_tag clearfix">	
+                                    <span class="price">
+                                        <span class="sign">$</span>
+                                        <span class="currency">79</span>
+                                        <span class="cent">.99</span>
+                                        <span class="month">/mo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pricing_feature_list">
+                                <ul>
+                                    <li><span>512GB</span> Storage</li>
+                                    <li><span>160Hrs</span> Usage</li>
+                                </ul>
+                            </div>
+                            <div class="pricing_price_btn clearfix">
+                                <a href="https://trelent-dashboard.ngrok.io/buy?plan=4">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h3 class="h3-responsive text-center text-white">All plans include Premium Support, a Dual Core CPU and 8GB RAM</h3>
+                <br>
+                <br>
+                <br>
+                <!--
                 <br>
                 <div class="row">
                     <div class="col-12 offset-0 col-lg-6 offset-lg-3 text-center">
@@ -290,6 +460,7 @@
                     </div>
                 </div>
                 <br>
+            -->
             </div>
         </section>
         <!-- /Pricing model/ -->
@@ -299,8 +470,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 offset-0 col-lg-10 offset-lg-1 mt-5">
-                        <div class="jumbotron bg-dark mt-4 text-center" style="margin-bottom: 0 !important;">
-                            <h2 class="text-center text-white"><b>Questions, anyone?</b></h2>
+                        <div class="jumbotron bg-dark p-4 text-center">
+                            <h2 class="h2-responsive text-center text-white">Questions, anyone?</h2>
                             <div class="accordion">
                                 <div class="accordion-item">
                                     <button id="accordion-button-1" aria-expanded="false">
@@ -308,25 +479,33 @@
                                     </button>
                                     <div class="accordion-content">
                                         <p>
-                                            If you own an old computer, Trelent provides a way to keep using that machine
-                                            as a means of accessing an entirely new computer, without the upfront investment.
-                                            It keeps electronic waste out of landfills, and money in your pocket. It's truly
-                                            magical!
+                                            If you own a computer, you've probably felt it slow down over time. A few too many
+                                            browser tabs, or one too many apps open, and boom! Your PC is unusable. Trelent let's you
+                                            run extra programs on a separate, more powerful computer, so that you can multitask
+                                            without worrying about a slow PC!
                                         </p>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <button id="accordion-button-2" aria-expanded="false">
-                                        <span class="accordion-title">How much does Trelent cost each month?</span>
+                                        <span class="accordion-title">What makes the different plans worth it?</span>
                                     </button>
                                     <div class="accordion-content">
                                         <p>
-                                            Your own costs will vary widely based on your storage requirements and monthly usage, but
-                                            we tend to see the average monthly bill totalling between $30 and $50. This roughly
-                                            coincides with a full work month worth of usage on our base plan and 128GB of storage.
+                                            Some people use their computer more than others. The average individual will use
+                                            their computer for several hours each day, and run into slow-downs later in the
+                                            day. That means they may only need to use their Trelent PC for an hour here or there.
+                                            <br>
+                                            <br>
+                                            Some power users, on the other hand, may run into slow-downs right from the start,
+                                            and need near-constant access to their Trelent PC.
+                                            <br>
+                                            <br>
+                                            Our plans offer cost-efficient solutions for both groups, and everyone in between!
                                         </p>
                                     </div>
                                 </div>
+                                <!--
                                 <div class="accordion-item">
                                     <button id="accordion-button-3" aria-expanded="false">
                                         <span class="accordion-title">Storage is expensive! What if I have a lot of files?</span>
@@ -343,17 +522,15 @@
                                         <p class="text-white text-left">* We may receive affiliate revenue when you click our link and purchase a plan through Sync.</p>
                                     </div>
                                 </div>
+                                -->
                                 <div class="accordion-item">
                                     <button id="accordion-button-4" aria-expanded="false">
-                                        <span class="accordion-title">Do I pay for usage while my Trelent is shut down?</span>
+                                        <span class="accordion-title">What counts as usage?</span>
                                     </button>
                                     <div class="accordion-content">
                                         <p>
-                                            Nope! When you shutdown your Trelent PC, billing stops immediately.
-                                            If you're using your Trelent PC and run out of credits, we'll send several
-                                            reminder emails before shutting it down for you. Just make sure you
-                                            use the dashboard to shutdown, shutting down through Windows won't
-                                            notify us and you will still be billed (albeit unintentionally).
+                                            Anytime your Trelent PC is "Running" (ie. it is online and you can access it) we
+                                            will be deducting hours from your monthly allowance.
                                         </p>
                                     </div>
                                 </div>
@@ -370,10 +547,29 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div class="accordion-item">
+                                    <button id="accordion-button-6" aria-expanded="false">
+                                        <span class="accordion-title">Can I get a more powerful PC?</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Absolutely! Just contact us with more details and we will get you a quote for your custom order!
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <br>
                             <br>
-                            <a class="btn btn-outline-white text-white" href="learn.html">Learn More</a>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10 offset-1 col-md-5 offset-md-1">
+                                        <a class="btn btn-outline-white btn-lg text-white w-100" href="learn.html">Learn More</a>
+                                    </div>
+                                    <div class="col-10 offset-1 col-md-5 offset-md-0">
+                                        <a class="btn btn-outline-white btn-lg text-white w-100" href="mailto:contact@trelent.net">Did we miss your Question?</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -381,8 +577,9 @@
         </section>
         <!-- /Frequently Asked Questions/ -->
         <div class="spacing-small"></div>
-        <div class="gradient-switch" id="signup"></div>
+        <div class="gradient-switch"></div>
         <!-- Signup Prompt -->
+        <!--
         <section class="technology">
             <div class="container">
                 <div class="row pt-5 pb-5" id="signup_form">
@@ -434,13 +631,14 @@
                 </div>
             </div>
         </section>
+        -->
         <!-- /Signup Prompt/ -->
         <!--Footer-->
-        <footer class="page-footer font-small pt-4 pb-2 technology" style="z-index: 2;">
+        <footer class="page-footer font-small pt-5 pb-5 technology" style="z-index: 2;">
             <div class="container-fluid text-center">
                 <div class="row">
                     <div class="col-12 offset-0 col-lg-3 offset-lg-2">
-                        <p class="lead white-text text-center colour-light">&copy; Trelent 2020</p>
+                        <p class="lead white-text text-center colour-light">&copy; Trelent 2021</p>
                     </div>
                     <div class="col-12 offset-0 col-lg-2">
                         <a class="colour-light lead text-center white-text" href="https://www.protodigital.ca" target="_blank">Website by Proto</a>
@@ -453,7 +651,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 offset-0">
-                        <p style="opacity: 0.4;">Please note that all prices are displayed in Canadian Dollars.</p>
+                        <p class="colour-light">Please note that all prices are displayed in USD.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -472,25 +670,14 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
-        <!-- Auth0 -->
-        <script src="https://cdn.auth0.com/js/auth0/9.13.2/auth0.min.js"></script>
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
         <!-- Our Scripts -->
         <script src="assets/js/accordion.js" type="text/javascript"></script>
         <script src="assets/js/site.js" type="text/javascript"></script>
         <script>
             var alertElem = document.getElementById("alert-email");
-
-            var webAuth = new auth0.WebAuth({
-                domain:       'trelent.us.auth0.com',
-                clientID:     'GOy6WMpPw3EPpEL5ZaI82lyjEKStgqkb'
-            });
             
             $(document).ready(function() {
                 var screenshotImage = document.getElementById('windows-screenshot');
@@ -512,38 +699,6 @@
             $(document).ready(function() {
                 $('.navbar-toggler').on('click', function () {
                     $('.animated-icon').toggleClass('open');
-                });
-            });
-
-            $('#btn_signup').click(function(e) {
-                e.preventDefault();
-
-                user_email = $('#user_email').val();
-                user_paswd = $('#user_password').val();
-
-                alertElem.classList.add("show");
-
-                webAuth.signup({
-                    connection: 'Username-Password-Authentication',
-                    email: user_email,
-                    password: user_paswd
-                }, function(err) {
-                    if (err){
-                        console.log(err);
-                        return alert('Something went wrong: ' + err.message);
-                    }
-
-                    // Okay, user has been signed up. Let's make sure they
-                    // verify their email!
-                    console.log("Successful signup!");
-                    form = document.getElementById('signup_form');
-                    form.classList.add('d-none');
-
-                    document.getElementById('email').innerText = user_email;
-
-                    verify = document.getElementById('verify');
-                    verify.classList.remove('d-none');
-                    verify.classList.add('d-block');
                 });
             });
         </script>
