@@ -41,7 +41,7 @@
         <link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#333333">
         <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
         <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+        <meta name="msapplication-config" content="/assets/images/icons/browserconfig.xms">
         <meta name="theme-color" content="#ffffff">
 
         <!-- Optimize for social sharing -->
@@ -61,14 +61,26 @@
         <meta name="twitter:description" content="A scalable, accessible PC in your browser.">
         <meta name="twitter:image" content="https://www.trelent.net/assets/images/icons/android-chrome-512x512.png">
         <!-- End Optimize -->
+
+        <!-- Hotjar Tracking Code for www.trelent.net -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1211976,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
     </head>
     <body>
         <div id="top"></div>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center" style="z-index: 1;">
-            <div class="d-flex w-50 mr-auto">
+            <div class="d-flex me-auto ms-0 ms-lg-5 w-50">
                 <a class="navbar-brand text-white" href="#top">
-                    <img src="assets/images/LightMark.svg" height="32">
+                    <img src="assets/images/LightWordmark.svg" height="42">
                 </a>
             </div>
             
@@ -88,11 +100,11 @@
                         <a class="hvr-underline-from-left nav-link text-white" href="learn.html">Learn</a>
                     </li>
                     <li class="nav-item m-1 m-lg-3">
-                        <a class="hvr-underline-from-left nav-link text-white" href="#pricing">Purchase</a>
+                        <a class="hvr-underline-from-left nav-link text-white" href="#signup">Purchase</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                    <li class="nav-item m-1 m-lg-3">
+                <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                    <li class="nav-item m-1 m-lg-3 me-0 me-lg-5">
                         <a class="hvr-underline-from-left nav-link text-white" href="https://dash.trelent.net">Trelent Dashboard</a>
                     </li>
                 </ul>
@@ -105,13 +117,13 @@
                 <div class="row">
                     <div class="col-12 offset-0">
                         <div class="header">
-                            <div class="left-content text-center text-lg-left">
+                            <div class="left-content text-left">
                                 <!--
                                 <h1 class="text-white"><img class="img-responsive w-80" src="assets/images/LightWordmark.svg"></h1>
                                 -->
                                 <h1 class="text-white">Computers are slow.</h1>
                                 <h2 class="text-white">Trelent fixes that.</h2>
-                                <a class="btn btn-outline-white mb-4" href="#signup">Get started</a>
+                                <a class="btn btn-outline-white btn-lg mb-4" href="#signup">Get started</a>
                                 <!--
                                 <a class="d-none d-lg-block" href="https://www.producthunt.com/posts/trelent?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trelent" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=222667&theme=dark" alt="Trelent - A scalable PC in your browser | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
                                 -->
@@ -160,7 +172,7 @@
                                 <br>
                                 *Contact us if you need more. We have it.
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white ms-0 text-white" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0">
@@ -176,16 +188,15 @@
                         <div class="p-lg-5">
                             <h2 class="display-5 text-left text-white"><b>Here's how it works.</b></h2>
                             <br>
-                            <p class="lead text-left text-white" style="opacity: 0.8;">
+                            <p class="lead text-left text-white">
                                 Your Trelent PC is a powerful, secure computer in the cloud.
                                 <br>
                                 <br>
-                                By accessing Trelent, you run some of your programs and store your largest files on a remote computer,
+                                By accessing Trelent, you run all your slowest programs and store your largest files on a remote computer,
                                 instead of on your own!
                                 <br>
                                 <br>
-                                This way, resource-hungry apps can be offloaded, speding up your computer and allowing
-                                you to work more efficiently.
+                                This way, resource-hungry apps won't be slowing down your computer, and it can run at its full potential.
                             </p>
                             <div class="col-12 offset-0 col-lg-6 offset-lg-0">
                                 <img class="w-100 d-block d-lg-none p-2" src="assets/images/Illustrations/secure_server.svg">
@@ -197,13 +208,15 @@
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0 mb-5 mb-lg-0">
                         <div class="p-lg-5 mt-5">
                             <h2 class="display-5 text-left text-white"><b>Only pay for what you use.</b></h2>
-                            <br>
-                            <p class="lead text-left text-white" style="opacity: 0.8;">
-                                Don't need your Trelent PC often? No problem, we have a plan for that. Your monthly bill
-                                covers storage and a set hourly usage. You're a power user and need more hours?
-                                No problem! We have a plan for that too.
+                            <p class="lead text-left text-white">
+                                Don't need your Trelent PC often? We have a plan for that.
+                                <br>
+                                <span style="opacity: 0.7;">
+                                    Your monthly bill covers storage and monthly usage. You're a
+                                    power user and need more hours? No problem! We have a plan for that too.
+                                </span>
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white btn-lg" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0">
@@ -217,13 +230,15 @@
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0 mb-5 mb-lg-0">
                         <div class="p-lg-5 mt-5">
                             <h2 class="display-5 text-left text-white"><b>Connect from any device.</b></h2>
-                            <br>
-                            <p class="lead text-left text-white" style="opacity: 0.8;">
-                                Your Trelent PC can be accessed through any device with a web browser. It behaves exactly like
-                                the Windows PC you're used to. Purchase and install programs the same way - there is no 
-                                learning curve. Connect instantly from any online device. You just need to login.
+                            <p class="lead text-left text-white">
+                                Your Trelent PC can be accessed through any web browser.
+                                <br>
+                                <span style="opacity: 0.7;">
+                                    It behaves exactly like the Windows PC you're used to. Purchase and
+                                    install programs the same way you always have - there's no learning curve.
+                                </span>
                             </p>
-                            <a class="btn btn-outline-white ml-0 text-white" href="learn.html">Learn More</a>
+                            <a class="btn btn-outline-white btn-lg ms-0 text-white" href="learn.html">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 offset-0 col-lg-6 offset-lg-0">
@@ -479,12 +494,14 @@
                                         <p>
                                             Some people use their computer more than others. The average individual will use
                                             their computer for several hours each day, and run into slow-downs later in the
-                                            day. That means they may only need to use Trelent for an hour here and there.
-                                            
-                                            Some power users, on the other hand, may run into slow-downs right from the start
-                                            , and need near-constant access to Trelent.
-
-                                            Our plans offer cost-efficient for both groups, and everyone in between!
+                                            day. That means they may only need to use their Trelent PC for an hour here or there.
+                                            <br>
+                                            <br>
+                                            Some power users, on the other hand, may run into slow-downs right from the start,
+                                            and need near-constant access to their Trelent PC.
+                                            <br>
+                                            <br>
+                                            Our plans offer cost-efficient solutions for both groups, and everyone in between!
                                         </p>
                                     </div>
                                 </div>
@@ -546,10 +563,10 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-10 offset-1 col-md-5 offset-md-1">
-                                        <a class="btn btn-outline-white text-white w-100" href="learn.html">Learn More</a>
+                                        <a class="btn btn-outline-white btn-lg text-white w-100" href="learn.html">Learn More</a>
                                     </div>
                                     <div class="col-10 offset-1 col-md-5 offset-md-0">
-                                        <a class="btn btn-outline-white text-white w-100" href="mailto:contact@trelent.net">Did we miss your Question?</a>
+                                        <a class="btn btn-outline-white btn-lg text-white w-100" href="mailto:contact@trelent.net">Did we miss your Question?</a>
                                     </div>
                                 </div>
                             </div>
@@ -652,25 +669,14 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
-        <!-- Auth0 -->
-        <script src="https://cdn.auth0.com/js/auth0/9.13.2/auth0.min.js"></script>
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
         <!-- Our Scripts -->
         <script src="assets/js/accordion.js" type="text/javascript"></script>
         <script src="assets/js/site.js" type="text/javascript"></script>
         <script>
             var alertElem = document.getElementById("alert-email");
-
-            var webAuth = new auth0.WebAuth({
-                domain:       'trelent.us.auth0.com',
-                clientID:     'GOy6WMpPw3EPpEL5ZaI82lyjEKStgqkb'
-            });
             
             $(document).ready(function() {
                 var screenshotImage = document.getElementById('windows-screenshot');
@@ -692,38 +698,6 @@
             $(document).ready(function() {
                 $('.navbar-toggler').on('click', function () {
                     $('.animated-icon').toggleClass('open');
-                });
-            });
-
-            $('#btn_signup').click(function(e) {
-                e.preventDefault();
-
-                user_email = $('#user_email').val();
-                user_paswd = $('#user_password').val();
-
-                alertElem.classList.add("show");
-
-                webAuth.signup({
-                    connection: 'Username-Password-Authentication',
-                    email: user_email,
-                    password: user_paswd
-                }, function(err) {
-                    if (err){
-                        console.log(err);
-                        return alert('Something went wrong: ' + err.message);
-                    }
-
-                    // Okay, user has been signed up. Let's make sure they
-                    // verify their email!
-                    console.log("Successful signup!");
-                    form = document.getElementById('signup_form');
-                    form.classList.add('d-none');
-
-                    document.getElementById('email').innerText = user_email;
-
-                    verify = document.getElementById('verify');
-                    verify.classList.remove('d-none');
-                    verify.classList.add('d-block');
                 });
             });
         </script>
