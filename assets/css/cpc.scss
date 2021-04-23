@@ -73,22 +73,20 @@ h1,h2,h3,h4,h5,h6{
 
 section{
     .header{
+        height: 75vh;
+
         @include breakpoint(mobileonly){
             display: block;
-            height: 75vh;
         }
         @include breakpoint(phablet){
             display: block;
-            height: 90vh;
         }
         @include breakpoint(tablet){
             display: flex;
-            height: 100vh;
         }
 
         @media (max-height: 30em) {
             display: block;
-            height: auto;
         }
 
         width: 100%;
@@ -123,12 +121,12 @@ section{
                     font-size: 3rem;
                 }
                 @include breakpoint(tablet){
-                    margin-top: 4rem;
-                    font-size: 4rem;
+                    margin-top: 3.75rem;
+                    font-size: 3.75rem;
                 }
                 @include breakpoint(laptop){
-                    margin-top: 6rem;
-                    font-size: 6rem;
+                    margin-top: 5rem;
+                    font-size: 5rem;
                 }
             }
 
